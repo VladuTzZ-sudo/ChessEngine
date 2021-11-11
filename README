@@ -1,0 +1,356 @@
+Echipa: Art of War
+Membrii: Urse Adrian Dinu
+         Matei Vlad Cristian
+         Dina Stefania Gabriela
+         Lazar Elena
+
+===== Instructini de compilare ====
+
+Makefile-ul contine urmatoarele reguli:
+    build: creeaza fisierul .jar corespunzator proiectului
+    run: ruleaza fisierul jar creat
+    xboard: porneste xboard folosind engine-ul nostru
+    clean: sterge fisierele .class si fisirul .jar
+Pentru testare:
+    1. make build
+    2. xboard -fcp "make run" -debug
+       sau
+       make xboard
+    3. make clean
+
+==== Detalii despre structura proiectului ====
+
+    Proiectul contine urmatoarele clase:
+
+    Clasa Board
+        == Folosita pentru reprezentare tablei de joc ==
+
+        :: clasa este de tip Singleton pentru a putea fi accesata si din exteriorul ei.
+        :: aceasta contine doua campuri, coordinates si table.
+        :: coordinates este o matrice de coordonate ( ne ajuta pentru a reduce numarul de instantieri
+        multiple ale obiectelor de tip Coordinate , astfel nu vor exista obiecte duplicate
+        pentru aceeasi coordonata ).
+        :: table este o matrice de piese folosita pentru reprezentarea tablei de joc.
+
+        FUNCTII:
+            :: newGame()
+                = resteaza tabla de joc printr-o noua instantiere.
+
+            :: getCoordinates(...)
+                = aceasta functie returneaza un obiecte de tip Coordinate din matricea de coordonate
+                pentru un x si un y dat.
+                = in cazul in care nu exista in matrice un astfel de obiect pentru coordonatele date, atunci se
+                creeaza un obiect nou si se pune in matrice, returnandu-se apoi.
+
+            :: isEmpty(...)
+                = metoda care intoarce ce tip de mutare se poate face la coordonata data ca parametru
+                 in functie de culoarea sa.
+                = Move.CAPTURE, Move.FREE, Move.BLOCK sunt codificate {0,1,2}.
+
+            :: initBoard()
+                = initializeaza tabla de joc si pune piesele pe tabla.
+                = fiecare piesa este adaugata intr-un vector de piese din clasa corespunzatoare in functie de
+                culoare. (Blacks sau Whites)
+
+            :: getPiecebylocation(...)
+                = metoda care intoarce piesa de la coordonata data ca paramtru, realizand legatura
+                dintre cooroonta de pe tabla de joc si pozitia din matrice.
+
+            :: executeMove(...)
+                = metoda care executa o mutare pe baza unui string trimis de xboard (Ex. a2a3).
+                = identifica din comanda coordonata de inceput si cea de final.
+                = se selecteaza piesa de la coordonata de inceput si se muta pe tabla la coordonata de final.
+                = daca aceasta piesa a fost un pion si a ajuns pe ultima linie in directia sa de mers , atunci
+                pionul devine regina.
+                = se trateaza si cazul in care se executa o miscare "en-passant" pentru un pion.
+                = de asemenea in cazul unui pion se trateaza si posibilitatile de promovare.
+	   :: evaluateBoard(...)
+		euristica folosita in alpha-beta pruning
+		Am calculat scorul pentru fiecare echipa.
+		Scorul este compus din suma valorilor pieselor + suma pozitiilor pieselor + suportul pieselor + mobilitate + pioni izolati + pioni blocati
+
+    Clasa Piece
+         == Clasa abstracta pentru reprezentarea unei piese ==
+
+         :: clasa contine patru campuri: freeMoves, captureMoves, coordinate si color.
+         :: freeMoves:  vector pentru mutarile libere posibile
+         :: captureMoves: vector pentru mutarile de capturare posibile
+         :: coordinate: coordonata piesei
+         :: color: culoarea piesei
+         :: moves: numarul de miscari realizate de piesa curenta
+         :: support: numarul de piese care apara piesa curenta
+         :: turns: numarul rundei
+
+         FUNCTII:
+            :: generateMoves()
+                = metoda abstracta care este implementata de fiecare piesa.
+                = aceasta genereaza mutarile posibile in functie de tipul piesei.
+                = updateaza cei doi vectori freeMoves si captureMoves.
+
+            :: getType()
+                = intoarce un string cu tipul piesei.
+
+            :: movePiece(...)
+                = metoda muta piesa curenta pe coordonata primita ca parametru.
+                = updateaza tabla de joc si campul coordinate din interiorul piesei.
+
+    Clasele Blacks si Whites
+         == Clasele retin informatii despre piesele negre/albe ==
+
+         :: clasele sunt de tip Singleton.
+         :: campurile claselor:
+            -> numberofpieces: numarul de piese negre/albe.
+            -> numberofpawns: numarul de pioni negre/albe.
+            -> blacks: vector cu piesele negre/albe.
+            -> lastMoved: piesa care a fost mutata ultima runda
+         :: vectorii blacks/whites contin toate piesele de culoare neagra/alba.
+
+         FUNCTII:
+            :: addBlackPiece(...)/addWhitePiece(...)
+                = metoda ce adauga o piesa neagra/alba in vector.
+
+            :: removeBlackPiece(...)/removeWhitePiece(...)
+                = metoda ce scoate o piesa neagra/alba din vector.
+
+            :: getPawn(...)
+                = metoda care intoarce un pion negru/alb care are mutari posibile.
+
+            :: getKnight(...)
+                = metoda care intoarce un cal negru care are mutari posibile.
+
+            :: getPiece(...)
+                = metoda care intoarce o piesa neagra care are mutari posibile.
+
+            :: getKingLocation(...)
+                = metoda care intoarce coordonata regelui.
+
+            :: getQueen(...)
+                = Metoda care intoarce regina.
+
+    Clasa Game
+         == Clasa Game citeste de la standard input comenzi, pe care le va interpreta
+          si va updata tabla de joc si starea jocului ==
+
+         :: clasa este de tip Singleton.
+         :: campurile clasei:
+            -> connected: flag care arata daca jocul s-a conectat la interfata xboard.
+            -> turn: arata cine urmeaza sa faca o miscare.
+            -> enginecolor/usercolor: parametrii pentru culorile echipelor.
+            -> force: indicator pentru force mode.
+            -> gameturns: inregistreaza numarul rundei curente.
+	In functie de dechiderile adversarului, raspundem cu anumite miscari.
+
+         FUNCTII:
+            :: readInput()
+                = metoda care citeste comenzi si le proceseaza.
+
+            :: processComand(...)
+                = metoda care proceseaza o comanda.
+                = verificam daca a primit o mutare de la Xboard, in acest caz apelandu-se
+                metoda executeMove() pentru a updata jocul.
+                = In acest caz interpretam miscarea realizata de adversar verificand daca
+                acesta a realizat o rocada sau ne-a pus regele intr-o pozitie de sah.
+                = In caz ca am primit sah, engine-ul incearca sa gaseasca o cale de scapare.
+                = Altfel, engine-ul va trimite o mutare catre Xboard, cautand o piesa pe care
+                sa o mute.
+
+                = comenzi :
+                    -> "xboard" : schimba flag-ul connected in true.
+                    -> "protover" : trimite lista cu optiuni catre Xboard.
+                    -> "new" : initializeaza intreg jocul.
+                    -> "go" : forteaza engine-ul sa trimita o miscare pentru un pion.
+                    -> "quit" : inchide jocul.
+                    -> "move" : executa o miscare.
+                    -> "black" : se seteaza culoarea engine-ului pe Black.
+                    -> "white" : se seteaza culoarea engine-ului pe White.
+                    -> "force" : se seteaza jocul pe modul force.
+                    -> "resign" : in functie de culoarea engine-ului, acesta castiga.
+
+    Clasa Brain
+         == Clasa care implementeaza gandirea engine-ului, pentru moment,
+                ea decide mutarile pionilor ==
+
+         :: campurile clasei:
+            -> enemyattack - matrice care retine unde poate sa atace inamicul
+            si pozitiile pieselor
+            -> defense - matrice care retine unde se poate apara engine-ul
+            si pozitiile pieselor
+	    -> engineattack - matrice care retine unde poate sa atace engine-ul
+            -> invalidPieces - vector de piese ale caror miscari sunt
+            sunt invalide
+            -> blackKing - regele negru
+            -> whiteKing - regele alb
+            ->enginesquares/enemysquares - variabile care retin numarul de casute
+					  controlate de fiecare jucator
+         :: clasa este de tip Singleton.
+
+         FUUNCTII:
+            :: generateAllMoves()
+                = Metoda care genereaza toate miscarile posibile
+                pentru ambele culori si updateaza matricele defense si enemyattack
+                = In matricea <<enemyattack>> codificarea va avea loc astfel:
+                    - pozitiile libere ( nu se afla nici o piesa acolo &
+                     nu pot fi atacate de adversar ) -->> COD "0".
+                    - piesele inamicului -->> COD "1".
+                    - piesele engine-lui -->> COD "2".
+                    - cei doi regi -->> COD "3".
+                    - pozitiile atacate -->> COD ">= 4" , in functie de cate piese ataca pozitia.
+                = In matricea <<defense>> codificarea va avea loc astfel:
+                    - pozitiile libere ( nu se afla nici o piesa acolo &
+                    nu pot fi atacate de adversar ) -->> COD "0".
+                    - piesele inamicului -->> COD "2".
+                    - piesele engine-lui -->> COD "1".
+                    - cei doi regi -->> COD "3".
+                    - pozitiile aparate -->> COD ">= 4" , in functie de cate piese apara pozitia.
+                = La finalul functiei se apeleaza functia verifyInvalidMoves() pentru a elimina
+                miscarile invalide ( care ar lasa un rege in sah ).
+
+            :: verifyInvalidMoves()
+                = Metoda Greedy care elimina miscarile invalide ale pieselor.
+                = Miscare invalida = miscare care ar lasa regele in sah prin mutarea sa sau
+                aceasta poate reprezenta chiar o miscare libera a regelui prin care el se va pune
+                singur in pozitie de sah.
+                = In functie de culoarea engine-lui se cauta miscarile invalide din echipa sa pentru a fi
+                eliminate.
+                = Astfel, tinand cont de coordonata regelui se parcurg cele 8 directii ( 4 linii + 4 diagonale )
+                si se cauta daca exista o situatie precum : pe directia analizata, langa rege se gaseste intai
+                o piesa de culoarea regelui , dar doar una, iar imediat dupa aceasta se afla o piesa inamica
+                care ataca regele ( deci o piesa potrivita , regina | nebun => diagonale sau tura | regina => linie )
+                astfel incat prin miscarea acelei piese din echipa sa ( prima gasita ) regele sa ramana in sah.
+                = Atunci cand se elimina o posibila miscare a unei piese, declarata invalida, se updateaza si matricea
+                de defense.
+                = De asemenea , se analizeaza si miscarile regelui, cele libere sa nu se afle sub o pozitie de atac
+                a unei piese inamice ( folosim matricea de attack ), iar in cazul miscarilor de capture se verifica
+                daca piesa de capturat nu este aparata.
+
+            :: addPiece(...)
+                = Metoda care adauga o piesa p pe matricele defense/enemyattack.
+
+            :: doMove()
+                = metoda care trimite xboard-ului o mutare a unui pion in functie
+                de culoarea piesei.
+                = in cazul in care nu mai este nicio mutare posibila vom da resign.
+                = se selecteaza o piesa in functie de culoarea engine-ului.
+                = am verificat daca piesa selectata este pion,
+                in acest caz am prioritizat miscarile en-passant.
+                = dupa fiecare miscare, se updateaza tabla de joc.
+                = urmatoarea prioritate o reprezinta mutarile de capturare.
+                = pentru pion, am verificat daca prin mutarea gasita ajunge
+                pe ultima linie ,in acest caz, am facut promovorea lui.
+                = urmatoarea prioritate, o reprezinta mutarile libere ale piesei.
+
+            :: checkChess()
+                = metoda care intoarce o lista de piese care dau sah engine-ului.
+                = in functie de culoarea engine-ului am parcurs piesele inamicului si am
+                verificat daca pozitia regelui coincide cu o mutare capture a acestora.
+                ( daca primeste sah de la o piesa adeversara ).
+
+            :: captureChessPiece(...)
+                = metoda care incearca sa capture piesa p care da sah engine-ului
+                ,in acest caz returnand true, altfel false.
+                = in functie de culoare engine-ului parcurgem piesele si verificam daca piesa curenta
+                poate captura piesa de la care primim sah.
+                = daca piesa cu care se incearca capturarea este un rege, atunci se verifica daca
+                prin luarea piesei adeversarului acesta sa nu ajunga in sah. Intelegem ca o piesa adversara
+                nu este aparata de alte piese inamice, folosindu-ne de campul "suport" din clasa "PIECE".
+                Campul "support" fiind updatat la inceputul fiecarei runde pentru toate piesele.
+                = daca piesa cu care se incearca capturarea este un pion, atunci se verifica daca
+                prin capturarea piesei care ne-a dat sah se ajunge pe ultima linie.
+
+            :: protectKing(...)
+                = Metoda care incearca sa protejeze regele aflat in sah.
+                        => returneaza true, in cazul in care a gasit o mutare.
+                        => returneaza false, in cazul in care am primit sah-mat.
+                = Primeste ca argument un ArrayList de piese care pot da sah regelui engine-ului.
+                = Verificam daca primim sah de la o singura piesa sau de la 2. ( nr max posibil ).
+                = In cazul in care primim sah de la 1 singura piesa:
+                       >> In functie de tipul piesei, incercam sa ne protejam regele prin:
+                            1. Capturarea piesei care ne da sah.
+                            2. Mutarea regelui pe o pozitie sigura.
+                            3. Mutarea unei piese in calea piesei inamice care ne da sah.
+                = Daca primim sah de la 2 piese, incercam doar sa mutam regele:
+                        >> Apelam functia moveKing() pentru cele 2 piese care ne dau sah.
+                        >> Incercam sa gasim o coordonata comuna buna astfel incat regele sa scape
+                        de sah.
+
+            :: moveKing(...)
+                = metoda care intoarce un vector de coordonate
+                pe care regele aflat in sah se poate muta.
+                = foloseste matricea <<enemyattack>> pentru a verifica daca o pozitie este libera.
+
+            :: checkCastlingConditions()
+                = metoda care intoarce un string format din
+                rocadele care se pot efectua.
+                = ne folosim de campul "moves" din PIECE pentru a verifica daca regele | tura au fost mutate.
+                = ne folosim de matricea <<enemyattck>> pentru a verifica daca regele se afla in sah sau
+                s-ar afla in timpul rocadei si pentru a vedea daca drumul este liber.
+	   
+	    :: checkChessevaluation(...)
+		= metoda care verifica pentru o culoare daca acea culoare isi ia sah
+
+	    ::stari(...)
+		= metoda care intoarce un vector de mutari posibile din starea curenta a jocului in functie de
+		  culoarea data ca paramtru
+
+	    ::alphabeta(...)
+	       = metoda care intoarce mutarea cea mai buna pentru engine pentru un depth dat, folosind algoritmul
+		alpha-beta pruning, minimax (algoritmi din cadrul cursului)
+	       nrsaheng - reprezinta numarul de sahuri dat de engine
+	       nrsahadv - reprezinta numarul de sahuri dat de adversar
+	       MAXI - cand revine din recursivitate am verificat daca miscarea curenta
+               a pus adversarul atunci am adunat la scorul returnat o valoare foarte mare
+	       Analog pentru MINI
+
+    Clase de constante: TeamColor si Move.
+
+    Clasele reprezentative tipurilor de piese: Rook, Bishop, Knight, King, Queen, Pawn.
+        = dintre acestea, singurele clase implementate sunt: Pawn si King.
+
+        Clasa Pawn
+            = functia generateMoves() este o metoda care genereaza mutarile posible
+            pentru pion.
+            = la fiecare apel vectorii freeMoves/captureMoves/enPassant se reinitializeaza.
+            = clasa contine si functia promotionGeneration() care alege random
+            o litera corespunzatoare promovarii pentru pionul in cauza.
+            = functia pawnPromotion(..) promoveaza pionul in functie de parametrul dat
+            apeland una din functiile pawnToRook() | pawnToBishop() | pawnToKnight() |
+            pawnToQueen().
+
+        Clasa King
+            = functia generateMoves() este o metoda care genereaza mutarile posible
+            pentru un rege.
+
+        Clasa Queen
+             = functia generateMoves() este o metoda care genereaza mutarile posible
+             pentru o regina.
+
+        Clasa Knight
+             = functia generateMoves() este o metoda care genereaza mutarile posible
+             pentru un cal.
+
+        Clasa Bishop
+             = functia generateMoves() este o metoda care genereaza mutarile posible
+             pentru un nebun.
+
+        Clasa Rook
+             =  functia generateMoves() este o metoda care genereaza mutarile posible
+             pentru o tura.
+
+        Clasa Scores - reprezinta o clasa in care sunt retinute valorile pieselor
+	    si valorile pozitiilor pieselor pentru midgame si endgame
+
+==== Detalii despre abordarea algoritmică a etapei ====
+    :: Aceasta etapa nu a presupus utilizarea algoritmilor studiati in cadrul cursului,
+    prin urmare nu s-au folosit algoritmi specifici.
+    :: Cateva metoda Greedy mai complexe folosite in rezolvarea jocului : captureChessPiece(),
+    moveKing(), protectKing(), checkCastlingConditions(), verifyInvalidMoves().
+	Pentru cautarea miscarii cea mai bune dpdv al scorului am folosit alpha-beta
+	pruning
+==== Surse de inspirație ====
+    :: https://www.gnu.org/software/xboard/
+    :: https://www.gnu.org/software/xboard/engine-intf.html
+
+==== Responsabilitatea fiecărui membru al echipei ====
+    :: Nu am impartit proiectul pe task-uri individuale, aproape intreg codul fiind scris impreuna.
+
+

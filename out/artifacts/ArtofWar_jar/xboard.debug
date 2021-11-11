@@ -1,0 +1,741 @@
+locale = LC_CTYPE=en_US.UTF-8;LC_NUMERIC=ro_RO.UTF-8;LC_TIME=ro_RO.UTF-8;LC_COLLATE=en_US.UTF-8;LC_MONETARY=ro_RO.UTF-8;LC_MESSAGES=en_US.UTF-8;LC_PAPER=ro_RO.UTF-8;LC_NAME=ro_RO.UTF-8;LC_ADDRESS=ro_RO.UTF-8;LC_TELEPHONE=ro_RO.UTF-8;LC_MEASUREMENT=ro_RO.UTF-8;LC_IDENTIFICATION=ro_RO.UTF-8
+recognized 'normal' (-1) as variant normal
+recognized 'normal' (-1) as variant normal
+recognized 'normal' (-1) as variant normal
+shuffleOpenings = 0
+shuffleOpenings = 0
+Version: xboard 4.9.1 + java ()
+Reset(1, 0) from gameMode 0
+recognized 'normal' (-1) as variant normal
+GameEnds(0, (null), 2)
+shuffleOpenings = 0
+StartChildProcess (dir=".") java -jar ArtofWar.jar
+92 >first : xboard
+protover 2
+159 <first : feature myname="Art of War" sigterm=0 sigint=0 san=0
+159 >first : accepted myname
+159 >first : accepted sigterm
+159 >first : accepted sigint
+159 >first : accepted san
+10093 >first : new
+random
+10093 >first : level 40 5 0
+10093 >first : post
+10093 >first : hard
+10101 <first : 1----------0
+10102 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+10102 <first : BPawn BPawn BPawn BPawn BPawn BPawn BPawn BPawn 
+10102 <first :  null  null  null  null  null  null  null  null 
+10102 <first :  null  null  null  null  null  null  null  null 
+10102 <first :  null  null  null  null  null  null  null  null 
+10102 <first :  null  null  null  null  null  null  null  null 
+10102 <first : WPawn WPawn WPawn WPawn WPawn WPawn WPawn WPawn 
+10102 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+10102 <first : 
+nps: w=-1, b=-1
+nps: w=-1, b=-1
+11323 >first : time 30000
+11323 >first : otim 30000
+book hit = (NULL)
+11323 >first : f2f3
+11394 <first : Coordinate{x=f, y=3}----WPawn 
+11394 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+11394 <first : BPawn BPawn BPawn BPawn BPawn BPawn BPawn BPawn 
+11394 <first :  null  null  null  null  null  null  null  null 
+11394 <first :  null  null  null  null  null  null  null  null 
+11394 <first :  null  null  null  null  null  null  null  null 
+11394 <first :  null  null  null  null  null WPawn  null  null 
+11394 <first : WPawn WPawn WPawn WPawn WPawn  null WPawn WPawn 
+11394 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+11394 <first : 
+11394 <first : BPawn - Coordinate{x=a, y=7}
+11394 <first : [Coordinate{x=a, y=6}] []
+11394 <first : BPawn - Coordinate{x=a, y=7}
+11394 <first : move a7a6
+11467 <first : BPawn 
+11467 <first : Coordinate{x=a, y=6}----BPawn 
+11467 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+11467 <first :  null BPawn BPawn BPawn BPawn BPawn BPawn BPawn 
+11467 <first : BPawn  null  null  null  null  null  null  null 
+11467 <first :  null  null  null  null  null  null  null  null 
+11467 <first :  null  null  null  null  null  null  null  null 
+11467 <first :  null  null  null  null  null WPawn  null  null 
+11467 <first : WPawn WPawn WPawn WPawn WPawn  null WPawn WPawn 
+11467 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+11467 <first : 
+12118 >first : time 29992
+12118 >first : otim 29927
+book hit = (NULL)
+12118 >first : f3f4
+12190 <first : Coordinate{x=f, y=4}----WPawn 
+12190 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+12190 <first :  null BPawn BPawn BPawn BPawn BPawn BPawn BPawn 
+12190 <first : BPawn  null  null  null  null  null  null  null 
+12190 <first :  null  null  null  null  null  null  null  null 
+12190 <first :  null  null  null  null  null WPawn  null  null 
+12190 <first :  null  null  null  null  null  null  null  null 
+12190 <first : WPawn WPawn WPawn WPawn WPawn  null WPawn WPawn 
+12190 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+12190 <first : 
+12190 <first : BPawn - Coordinate{x=a, y=6}
+12190 <first : [Coordinate{x=a, y=5}] []
+12190 <first : BPawn - Coordinate{x=a, y=6}
+12190 <first : move a6a5
+12262 <first : BPawn 
+12262 <first : Coordinate{x=a, y=5}----BPawn 
+12262 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+12262 <first :  null BPawn BPawn BPawn BPawn BPawn BPawn BPawn 
+12262 <first :  null  null  null  null  null  null  null  null 
+12262 <first : BPawn  null  null  null  null  null  null  null 
+12262 <first :  null  null  null  null  null WPawn  null  null 
+12262 <first :  null  null  null  null  null  null  null  null 
+12262 <first : WPawn WPawn WPawn WPawn WPawn  null WPawn WPawn 
+12262 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+12262 <first : 
+12727 >first : time 29985
+12727 >first : otim 29873
+book hit = (NULL)
+12727 >first : f4f5
+12798 <first : Coordinate{x=f, y=5}----WPawn 
+12798 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+12798 <first :  null BPawn BPawn BPawn BPawn BPawn BPawn BPawn 
+12798 <first :  null  null  null  null  null  null  null  null 
+12798 <first : BPawn  null  null  null  null WPawn  null  null 
+12798 <first :  null  null  null  null  null  null  null  null 
+12798 <first :  null  null  null  null  null  null  null  null 
+12798 <first : WPawn WPawn WPawn WPawn WPawn  null WPawn WPawn 
+12798 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+12798 <first : 
+12798 <first : BPawn - Coordinate{x=a, y=5}
+12798 <first : [Coordinate{x=a, y=4}] []
+12798 <first : BPawn - Coordinate{x=a, y=5}
+12798 <first : move a5a4
+12870 <first : BPawn 
+12870 <first : Coordinate{x=a, y=4}----BPawn 
+12870 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+12870 <first :  null BPawn BPawn BPawn BPawn BPawn BPawn BPawn 
+12870 <first :  null  null  null  null  null  null  null  null 
+12870 <first :  null  null  null  null  null WPawn  null  null 
+12870 <first : BPawn  null  null  null  null  null  null  null 
+12870 <first :  null  null  null  null  null  null  null  null 
+12870 <first : WPawn WPawn WPawn WPawn WPawn  null WPawn WPawn 
+12870 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+12870 <first : 
+13298 >first : time 29978
+13298 >first : otim 29823
+book hit = (NULL)
+13298 >first : f5f6
+13370 <first : Coordinate{x=f, y=6}----WPawn 
+13370 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+13370 <first :  null BPawn BPawn BPawn BPawn BPawn BPawn BPawn 
+13370 <first :  null  null  null  null  null WPawn  null  null 
+13370 <first :  null  null  null  null  null  null  null  null 
+13370 <first : BPawn  null  null  null  null  null  null  null 
+13370 <first :  null  null  null  null  null  null  null  null 
+13370 <first : WPawn WPawn WPawn WPawn WPawn  null WPawn WPawn 
+13370 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+13370 <first : 
+13370 <first : BPawn - Coordinate{x=a, y=4}
+13370 <first : [Coordinate{x=a, y=3}] []
+13370 <first : BPawn - Coordinate{x=a, y=4}
+13370 <first : move a4a3
+13442 <first : BPawn 
+13442 <first : Coordinate{x=a, y=3}----BPawn 
+13442 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+13442 <first :  null BPawn BPawn BPawn BPawn BPawn BPawn BPawn 
+13442 <first :  null  null  null  null  null WPawn  null  null 
+13442 <first :  null  null  null  null  null  null  null  null 
+13442 <first :  null  null  null  null  null  null  null  null 
+13442 <first : BPawn  null  null  null  null  null  null  null 
+13442 <first : WPawn WPawn WPawn WPawn WPawn  null WPawn WPawn 
+13442 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+13442 <first : 
+14596 >first : time 29971
+14597 >first : otim 29701
+book hit = (NULL)
+14597 >first : b2a3
+14668 <first : Coordinate{x=a, y=3}----WPawn 
+14668 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+14668 <first :  null BPawn BPawn BPawn BPawn BPawn BPawn BPawn 
+14668 <first :  null  null  null  null  null WPawn  null  null 
+14668 <first :  null  null  null  null  null  null  null  null 
+14668 <first :  null  null  null  null  null  null  null  null 
+14668 <first : WPawn  null  null  null  null  null  null  null 
+14668 <first : WPawn  null WPawn WPawn WPawn  null WPawn WPawn 
+14668 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+14668 <first : 
+14668 <first : BPawn - Coordinate{x=b, y=7}
+14668 <first : [Coordinate{x=b, y=6}] []
+14668 <first : BPawn - Coordinate{x=b, y=7}
+14668 <first : move b7b6
+14740 <first : BPawn 
+14740 <first : Coordinate{x=b, y=6}----BPawn 
+14740 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+14740 <first :  null  null BPawn BPawn BPawn BPawn BPawn BPawn 
+14740 <first :  null BPawn  null  null  null WPawn  null  null 
+14740 <first :  null  null  null  null  null  null  null  null 
+14740 <first :  null  null  null  null  null  null  null  null 
+14740 <first : WPawn  null  null  null  null  null  null  null 
+14740 <first : WPawn  null WPawn WPawn WPawn  null WPawn WPawn 
+14740 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+14740 <first : 
+15392 >first : time 29964
+15393 >first : otim 29628
+book hit = (NULL)
+15393 >first : a3a4
+15464 <first : Coordinate{x=a, y=4}----WPawn 
+15464 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+15464 <first :  null  null BPawn BPawn BPawn BPawn BPawn BPawn 
+15464 <first :  null BPawn  null  null  null WPawn  null  null 
+15464 <first :  null  null  null  null  null  null  null  null 
+15464 <first : WPawn  null  null  null  null  null  null  null 
+15464 <first :  null  null  null  null  null  null  null  null 
+15464 <first : WPawn  null WPawn WPawn WPawn  null WPawn WPawn 
+15464 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+15464 <first : 
+15464 <first : BPawn - Coordinate{x=b, y=6}
+15464 <first : [Coordinate{x=b, y=5}] []
+15464 <first : BPawn - Coordinate{x=b, y=6}
+15464 <first : move b6b5
+15537 <first : BPawn 
+15537 <first : Coordinate{x=b, y=5}----BPawn 
+15537 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+15537 <first :  null  null BPawn BPawn BPawn BPawn BPawn BPawn 
+15537 <first :  null  null  null  null  null WPawn  null  null 
+15537 <first :  null BPawn  null  null  null  null  null  null 
+15537 <first : WPawn  null  null  null  null  null  null  null 
+15537 <first :  null  null  null  null  null  null  null  null 
+15537 <first : WPawn  null WPawn WPawn WPawn  null WPawn WPawn 
+15537 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+15537 <first : 
+16051 >first : time 29957
+16051 >first : otim 29570
+book hit = (NULL)
+16051 >first : a4b5
+16123 <first : Coordinate{x=b, y=5}----WPawn 
+16123 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+16123 <first :  null  null BPawn BPawn BPawn BPawn BPawn BPawn 
+16123 <first :  null  null  null  null  null WPawn  null  null 
+16123 <first :  null WPawn  null  null  null  null  null  null 
+16123 <first :  null  null  null  null  null  null  null  null 
+16123 <first :  null  null  null  null  null  null  null  null 
+16123 <first : WPawn  null WPawn WPawn WPawn  null WPawn WPawn 
+16123 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+16123 <first : 
+16123 <first : BPawn - Coordinate{x=c, y=7}
+16123 <first : [Coordinate{x=c, y=6}] []
+16123 <first : BPawn - Coordinate{x=c, y=7}
+16123 <first : move c7c6
+16196 <first : BPawn 
+16196 <first : Coordinate{x=c, y=6}----BPawn 
+16196 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+16196 <first :  null  null  null BPawn BPawn BPawn BPawn BPawn 
+16196 <first :  null  null BPawn  null  null WPawn  null  null 
+16196 <first :  null WPawn  null  null  null  null  null  null 
+16196 <first :  null  null  null  null  null  null  null  null 
+16196 <first :  null  null  null  null  null  null  null  null 
+16196 <first : WPawn  null WPawn WPawn WPawn  null WPawn WPawn 
+16196 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+16196 <first : 
+18709 >first : time 29949
+18709 >first : otim 29311
+book hit = (NULL)
+18709 >first : b5c6
+18781 <first : Coordinate{x=c, y=6}----WPawn 
+18781 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+18781 <first :  null  null  null BPawn BPawn BPawn BPawn BPawn 
+18781 <first :  null  null WPawn  null  null WPawn  null  null 
+18781 <first :  null  null  null  null  null  null  null  null 
+18781 <first :  null  null  null  null  null  null  null  null 
+18781 <first :  null  null  null  null  null  null  null  null 
+18781 <first : WPawn  null WPawn WPawn WPawn  null WPawn WPawn 
+18781 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+18781 <first : 
+18781 <first : BPawn - Coordinate{x=d, y=7}
+18781 <first : [Coordinate{x=d, y=6}] [Coordinate{x=c, y=6}]
+18781 <first : BPawn - Coordinate{x=d, y=7}
+18781 <first : move d7c6
+18853 <first : BPawn 
+18853 <first : Coordinate{x=c, y=6}----BPawn 
+18853 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+18853 <first :  null  null  null  null BPawn BPawn BPawn BPawn 
+18853 <first :  null  null BPawn  null  null WPawn  null  null 
+18853 <first :  null  null  null  null  null  null  null  null 
+18853 <first :  null  null  null  null  null  null  null  null 
+18853 <first :  null  null  null  null  null  null  null  null 
+18853 <first : WPawn  null WPawn WPawn WPawn  null WPawn WPawn 
+18853 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+18853 <first : 
+20387 >first : time 29942
+20387 >first : otim 29151
+book hit = (NULL)
+20387 >first : c2c3
+20461 <first : Coordinate{x=c, y=3}----WPawn 
+20461 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+20461 <first :  null  null  null  null BPawn BPawn BPawn BPawn 
+20461 <first :  null  null BPawn  null  null WPawn  null  null 
+20461 <first :  null  null  null  null  null  null  null  null 
+20461 <first :  null  null  null  null  null  null  null  null 
+20461 <first :  null  null WPawn  null  null  null  null  null 
+20461 <first : WPawn  null  null WPawn WPawn  null WPawn WPawn 
+20461 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+20461 <first : 
+20461 <first : BPawn - Coordinate{x=c, y=6}
+20461 <first : [Coordinate{x=c, y=5}] []
+20461 <first : BPawn - Coordinate{x=c, y=6}
+20461 <first : move c6c5
+20533 <first : BPawn 
+20533 <first : Coordinate{x=c, y=5}----BPawn 
+20533 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+20533 <first :  null  null  null  null BPawn BPawn BPawn BPawn 
+20533 <first :  null  null  null  null  null WPawn  null  null 
+20533 <first :  null  null BPawn  null  null  null  null  null 
+20533 <first :  null  null  null  null  null  null  null  null 
+20533 <first :  null  null WPawn  null  null  null  null  null 
+20533 <first : WPawn  null  null WPawn WPawn  null WPawn WPawn 
+20533 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+20533 <first : 
+21070 >first : time 29935
+21070 >first : otim 29090
+book hit = (NULL)
+21070 >first : c3c4
+21142 <first : Coordinate{x=c, y=4}----WPawn 
+21142 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+21142 <first :  null  null  null  null BPawn BPawn BPawn BPawn 
+21142 <first :  null  null  null  null  null WPawn  null  null 
+21142 <first :  null  null BPawn  null  null  null  null  null 
+21142 <first :  null  null WPawn  null  null  null  null  null 
+21142 <first :  null  null  null  null  null  null  null  null 
+21142 <first : WPawn  null  null WPawn WPawn  null WPawn WPawn 
+21142 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+21142 <first : 
+21142 <first : BPawn - Coordinate{x=c, y=5}
+21142 <first : BPawn - Coordinate{x=e, y=7}
+21142 <first : [Coordinate{x=e, y=6}] [Coordinate{x=f, y=6}]
+21142 <first : BPawn - Coordinate{x=e, y=7}
+21142 <first : move e7f6
+21214 <first : BPawn 
+21214 <first : Coordinate{x=f, y=6}----BPawn 
+21214 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+21214 <first :  null  null  null  null  null BPawn BPawn BPawn 
+21214 <first :  null  null  null  null  null BPawn  null  null 
+21214 <first :  null  null BPawn  null  null  null  null  null 
+21214 <first :  null  null WPawn  null  null  null  null  null 
+21214 <first :  null  null  null  null  null  null  null  null 
+21214 <first : WPawn  null  null WPawn WPawn  null WPawn WPawn 
+21214 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+21214 <first : 
+22009 >first : time 29928
+22009 >first : otim 29003
+book hit = (NULL)
+22009 >first : e2e3
+22081 <first : Coordinate{x=e, y=3}----WPawn 
+22081 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+22081 <first :  null  null  null  null  null BPawn BPawn BPawn 
+22081 <first :  null  null  null  null  null BPawn  null  null 
+22081 <first :  null  null BPawn  null  null  null  null  null 
+22081 <first :  null  null WPawn  null  null  null  null  null 
+22081 <first :  null  null  null  null WPawn  null  null  null 
+22081 <first : WPawn  null  null WPawn  null  null WPawn WPawn 
+22081 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+22081 <first : 
+22081 <first : BPawn - Coordinate{x=c, y=5}
+22081 <first : BPawn - Coordinate{x=f, y=6}
+22081 <first : [Coordinate{x=f, y=5}] []
+22081 <first : BPawn - Coordinate{x=f, y=6}
+22081 <first : move f6f5
+22153 <first : BPawn 
+22153 <first : Coordinate{x=f, y=5}----BPawn 
+22153 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+22153 <first :  null  null  null  null  null BPawn BPawn BPawn 
+22153 <first :  null  null  null  null  null  null  null  null 
+22153 <first :  null  null BPawn  null  null BPawn  null  null 
+22153 <first :  null  null WPawn  null  null  null  null  null 
+22153 <first :  null  null  null  null WPawn  null  null  null 
+22153 <first : WPawn  null  null WPawn  null  null WPawn WPawn 
+22153 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+22153 <first : 
+22763 >first : time 29920
+22763 >first : otim 28935
+book hit = (NULL)
+22763 >first : e3e4
+22835 <first : Coordinate{x=e, y=4}----WPawn 
+22835 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+22835 <first :  null  null  null  null  null BPawn BPawn BPawn 
+22835 <first :  null  null  null  null  null  null  null  null 
+22835 <first :  null  null BPawn  null  null BPawn  null  null 
+22835 <first :  null  null WPawn  null WPawn  null  null  null 
+22835 <first :  null  null  null  null  null  null  null  null 
+22835 <first : WPawn  null  null WPawn  null  null WPawn WPawn 
+22835 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+22835 <first : 
+22835 <first : BPawn - Coordinate{x=c, y=5}
+22835 <first : BPawn - Coordinate{x=f, y=5}
+22835 <first : [Coordinate{x=f, y=4}] [Coordinate{x=e, y=4}]
+22835 <first : BPawn - Coordinate{x=f, y=5}
+22835 <first : move f5e4
+22907 <first : BPawn 
+22907 <first : Coordinate{x=e, y=4}----BPawn 
+22907 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+22907 <first :  null  null  null  null  null BPawn BPawn BPawn 
+22907 <first :  null  null  null  null  null  null  null  null 
+22907 <first :  null  null BPawn  null  null  null  null  null 
+22907 <first :  null  null WPawn  null BPawn  null  null  null 
+22907 <first :  null  null  null  null  null  null  null  null 
+22907 <first : WPawn  null  null WPawn  null  null WPawn WPawn 
+22907 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+22907 <first : 
+24054 >first : time 29913
+24054 >first : otim 28813
+book hit = (NULL)
+24054 >first : d2d3
+24126 <first : Coordinate{x=d, y=3}----WPawn 
+24126 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+24126 <first :  null  null  null  null  null BPawn BPawn BPawn 
+24126 <first :  null  null  null  null  null  null  null  null 
+24126 <first :  null  null BPawn  null  null  null  null  null 
+24126 <first :  null  null WPawn  null BPawn  null  null  null 
+24126 <first :  null  null  null WPawn  null  null  null  null 
+24126 <first : WPawn  null  null  null  null  null WPawn WPawn 
+24126 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+24126 <first : 
+24126 <first : BPawn - Coordinate{x=c, y=5}
+24126 <first : BPawn - Coordinate{x=e, y=4}
+24126 <first : [Coordinate{x=e, y=3}] [Coordinate{x=d, y=3}]
+24126 <first : BPawn - Coordinate{x=e, y=4}
+24126 <first : move e4d3
+24198 <first : BPawn 
+24198 <first : Coordinate{x=d, y=3}----BPawn 
+24198 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+24198 <first :  null  null  null  null  null BPawn BPawn BPawn 
+24198 <first :  null  null  null  null  null  null  null  null 
+24198 <first :  null  null BPawn  null  null  null  null  null 
+24198 <first :  null  null WPawn  null  null  null  null  null 
+24198 <first :  null  null  null BPawn  null  null  null  null 
+24198 <first : WPawn  null  null  null  null  null WPawn WPawn 
+24198 <first : WRook WKnight WBishop WQueen WKing WBishop WKnight WRook 
+24198 <first : 
+25653 >first : time 29906
+25653 >first : otim 28660
+book hit = (NULL)
+25653 >first : d1d3
+25725 <first : Coordinate{x=d, y=3}----WQueen 
+25725 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+25725 <first :  null  null  null  null  null BPawn BPawn BPawn 
+25725 <first :  null  null  null  null  null  null  null  null 
+25725 <first :  null  null BPawn  null  null  null  null  null 
+25725 <first :  null  null WPawn  null  null  null  null  null 
+25725 <first :  null  null  null WQueen  null  null  null  null 
+25725 <first : WPawn  null  null  null  null  null WPawn WPawn 
+25725 <first : WRook WKnight WBishop  null WKing WBishop WKnight WRook 
+25725 <first : 
+25725 <first : BPawn - Coordinate{x=c, y=5}
+25725 <first : BPawn - Coordinate{x=f, y=7}
+25725 <first : [Coordinate{x=f, y=6}] []
+25725 <first : BPawn - Coordinate{x=f, y=7}
+25725 <first : move f7f6
+25797 <first : BPawn 
+25797 <first : Coordinate{x=f, y=6}----BPawn 
+25798 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+25798 <first :  null  null  null  null  null  null BPawn BPawn 
+25798 <first :  null  null  null  null  null BPawn  null  null 
+25798 <first :  null  null BPawn  null  null  null  null  null 
+25798 <first :  null  null WPawn  null  null  null  null  null 
+25798 <first :  null  null  null WQueen  null  null  null  null 
+25798 <first : WPawn  null  null  null  null  null WPawn WPawn 
+25798 <first : WRook WKnight WBishop  null WKing WBishop WKnight WRook 
+25798 <first : 
+26755 >first : time 29899
+26755 >first : otim 28557
+book hit = (NULL)
+26755 >first : g2g3
+26827 <first : Coordinate{x=g, y=3}----WPawn 
+26827 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+26827 <first :  null  null  null  null  null  null BPawn BPawn 
+26827 <first :  null  null  null  null  null BPawn  null  null 
+26827 <first :  null  null BPawn  null  null  null  null  null 
+26827 <first :  null  null WPawn  null  null  null  null  null 
+26827 <first :  null  null  null WQueen  null  null WPawn  null 
+26827 <first : WPawn  null  null  null  null  null  null WPawn 
+26827 <first : WRook WKnight WBishop  null WKing WBishop WKnight WRook 
+26827 <first : 
+26827 <first : BPawn - Coordinate{x=c, y=5}
+26827 <first : BPawn - Coordinate{x=f, y=6}
+26827 <first : [Coordinate{x=f, y=5}] []
+26827 <first : BPawn - Coordinate{x=f, y=6}
+26827 <first : move f6f5
+26899 <first : BPawn 
+26899 <first : Coordinate{x=f, y=5}----BPawn 
+26899 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+26899 <first :  null  null  null  null  null  null BPawn BPawn 
+26899 <first :  null  null  null  null  null  null  null  null 
+26899 <first :  null  null BPawn  null  null BPawn  null  null 
+26899 <first :  null  null WPawn  null  null  null  null  null 
+26899 <first :  null  null  null WQueen  null  null WPawn  null 
+26899 <first : WPawn  null  null  null  null  null  null WPawn 
+26899 <first : WRook WKnight WBishop  null WKing WBishop WKnight WRook 
+26899 <first : 
+27549 >first : time 29892
+27549 >first : otim 28485
+book hit = (NULL)
+27549 >first : g3g4
+27621 <first : Coordinate{x=g, y=4}----WPawn 
+27621 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+27621 <first :  null  null  null  null  null  null BPawn BPawn 
+27621 <first :  null  null  null  null  null  null  null  null 
+27621 <first :  null  null BPawn  null  null BPawn  null  null 
+27621 <first :  null  null WPawn  null  null  null WPawn  null 
+27621 <first :  null  null  null WQueen  null  null  null  null 
+27621 <first : WPawn  null  null  null  null  null  null WPawn 
+27621 <first : WRook WKnight WBishop  null WKing WBishop WKnight WRook 
+27621 <first : 
+27621 <first : BPawn - Coordinate{x=c, y=5}
+27621 <first : BPawn - Coordinate{x=f, y=5}
+27621 <first : [Coordinate{x=f, y=4}] [Coordinate{x=g, y=4}]
+27621 <first : BPawn - Coordinate{x=f, y=5}
+27621 <first : move f5g4
+27693 <first : BPawn 
+27693 <first : Coordinate{x=g, y=4}----BPawn 
+27693 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+27693 <first :  null  null  null  null  null  null BPawn BPawn 
+27693 <first :  null  null  null  null  null  null  null  null 
+27693 <first :  null  null BPawn  null  null  null  null  null 
+27693 <first :  null  null WPawn  null  null  null BPawn  null 
+27693 <first :  null  null  null WQueen  null  null  null  null 
+27693 <first : WPawn  null  null  null  null  null  null WPawn 
+27693 <first : WRook WKnight WBishop  null WKing WBishop WKnight WRook 
+27693 <first : 
+28698 >first : time 29884
+28698 >first : otim 28377
+book hit = (NULL)
+28698 >first : h2h3
+28770 <first : Coordinate{x=h, y=3}----WPawn 
+28770 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+28770 <first :  null  null  null  null  null  null BPawn BPawn 
+28770 <first :  null  null  null  null  null  null  null  null 
+28770 <first :  null  null BPawn  null  null  null  null  null 
+28770 <first :  null  null WPawn  null  null  null BPawn  null 
+28770 <first :  null  null  null WQueen  null  null  null WPawn 
+28770 <first : WPawn  null  null  null  null  null  null  null 
+28770 <first : WRook WKnight WBishop  null WKing WBishop WKnight WRook 
+28770 <first : 
+28770 <first : BPawn - Coordinate{x=c, y=5}
+28770 <first : BPawn - Coordinate{x=g, y=4}
+28770 <first : [Coordinate{x=g, y=3}] [Coordinate{x=h, y=3}]
+28770 <first : BPawn - Coordinate{x=g, y=4}
+28770 <first : move g4h3
+28842 <first : BPawn 
+28842 <first : Coordinate{x=h, y=3}----BPawn 
+28842 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+28842 <first :  null  null  null  null  null  null BPawn BPawn 
+28842 <first :  null  null  null  null  null  null  null  null 
+28842 <first :  null  null BPawn  null  null  null  null  null 
+28842 <first :  null  null WPawn  null  null  null  null  null 
+28842 <first :  null  null  null WQueen  null  null  null BPawn 
+28842 <first : WPawn  null  null  null  null  null  null  null 
+28842 <first : WRook WKnight WBishop  null WKing WBishop WKnight WRook 
+28842 <first : 
+29721 >first : time 29877
+29721 >first : otim 28282
+book hit = (NULL)
+29721 >first : h1h3
+29793 <first : Coordinate{x=h, y=3}----WRook 
+29793 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+29793 <first :  null  null  null  null  null  null BPawn BPawn 
+29793 <first :  null  null  null  null  null  null  null  null 
+29793 <first :  null  null BPawn  null  null  null  null  null 
+29793 <first :  null  null WPawn  null  null  null  null  null 
+29793 <first :  null  null  null WQueen  null  null  null WRook 
+29793 <first : WPawn  null  null  null  null  null  null  null 
+29793 <first : WRook WKnight WBishop  null WKing WBishop WKnight  null 
+29793 <first : 
+29793 <first : BPawn - Coordinate{x=c, y=5}
+29793 <first : BPawn - Coordinate{x=g, y=7}
+29793 <first : [Coordinate{x=g, y=6}] []
+29793 <first : BPawn - Coordinate{x=g, y=7}
+29793 <first : move g7g6
+29865 <first : BPawn 
+29865 <first : Coordinate{x=g, y=6}----BPawn 
+29865 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+29865 <first :  null  null  null  null  null  null  null BPawn 
+29865 <first :  null  null  null  null  null  null BPawn  null 
+29865 <first :  null  null BPawn  null  null  null  null  null 
+29865 <first :  null  null WPawn  null  null  null  null  null 
+29865 <first :  null  null  null WQueen  null  null  null WRook 
+29865 <first : WPawn  null  null  null  null  null  null  null 
+29865 <first : WRook WKnight WBishop  null WKing WBishop WKnight  null 
+29865 <first : 
+30602 >first : time 29870
+30602 >first : otim 28201
+book hit = (NULL)
+30602 >first : h3h4
+30674 <first : Coordinate{x=h, y=4}----WRook 
+30674 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+30674 <first :  null  null  null  null  null  null  null BPawn 
+30674 <first :  null  null  null  null  null  null BPawn  null 
+30674 <first :  null  null BPawn  null  null  null  null  null 
+30674 <first :  null  null WPawn  null  null  null  null WRook 
+30674 <first :  null  null  null WQueen  null  null  null  null 
+30674 <first : WPawn  null  null  null  null  null  null  null 
+30674 <first : WRook WKnight WBishop  null WKing WBishop WKnight  null 
+30674 <first : 
+30674 <first : BPawn - Coordinate{x=c, y=5}
+30674 <first : BPawn - Coordinate{x=g, y=6}
+30674 <first : [Coordinate{x=g, y=5}] []
+30674 <first : BPawn - Coordinate{x=g, y=6}
+30674 <first : move g6g5
+30746 <first : BPawn 
+30746 <first : Coordinate{x=g, y=5}----BPawn 
+30746 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+30746 <first :  null  null  null  null  null  null  null BPawn 
+30746 <first :  null  null  null  null  null  null  null  null 
+30746 <first :  null  null BPawn  null  null  null BPawn  null 
+30746 <first :  null  null WPawn  null  null  null  null WRook 
+30746 <first :  null  null  null WQueen  null  null  null  null 
+30746 <first : WPawn  null  null  null  null  null  null  null 
+30746 <first : WRook WKnight WBishop  null WKing WBishop WKnight  null 
+30746 <first : 
+34040 >first : time 29863
+34040 >first : otim 27865
+book hit = (NULL)
+34040 >first : h4g4
+34112 <first : Coordinate{x=g, y=4}----WRook 
+34112 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+34112 <first :  null  null  null  null  null  null  null BPawn 
+34112 <first :  null  null  null  null  null  null  null  null 
+34112 <first :  null  null BPawn  null  null  null BPawn  null 
+34112 <first :  null  null WPawn  null  null  null WRook  null 
+34112 <first :  null  null  null WQueen  null  null  null  null 
+34112 <first : WPawn  null  null  null  null  null  null  null 
+34112 <first : WRook WKnight WBishop  null WKing WBishop WKnight  null 
+34112 <first : 
+34112 <first : BPawn - Coordinate{x=c, y=5}
+34112 <first : BPawn - Coordinate{x=g, y=5}
+34112 <first : BPawn - Coordinate{x=h, y=7}
+34112 <first : [Coordinate{x=h, y=6}] []
+34112 <first : BPawn - Coordinate{x=h, y=7}
+34112 <first : move h7h6
+34184 <first : BPawn 
+34184 <first : Coordinate{x=h, y=6}----BPawn 
+34184 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+34184 <first :  null  null  null  null  null  null  null  null 
+34184 <first :  null  null  null  null  null  null  null BPawn 
+34184 <first :  null  null BPawn  null  null  null BPawn  null 
+34184 <first :  null  null WPawn  null  null  null WRook  null 
+34184 <first :  null  null  null WQueen  null  null  null  null 
+34184 <first : WPawn  null  null  null  null  null  null  null 
+34184 <first : WRook WKnight WBishop  null WKing WBishop WKnight  null 
+34184 <first : 
+34940 >first : time 29856
+34940 >first : otim 27782
+book hit = (NULL)
+34940 >first : g4g5
+35012 <first : Coordinate{x=g, y=5}----WRook 
+35012 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+35012 <first :  null  null  null  null  null  null  null  null 
+35012 <first :  null  null  null  null  null  null  null BPawn 
+35012 <first :  null  null BPawn  null  null  null WRook  null 
+35012 <first :  null  null WPawn  null  null  null  null  null 
+35012 <first :  null  null  null WQueen  null  null  null  null 
+35012 <first : WPawn  null  null  null  null  null  null  null 
+35012 <first : WRook WKnight WBishop  null WKing WBishop WKnight  null 
+35012 <first : 
+35012 <first : BPawn - Coordinate{x=c, y=5}
+35012 <first : BPawn - Coordinate{x=h, y=6}
+35012 <first : [Coordinate{x=h, y=5}] [Coordinate{x=g, y=5}]
+35012 <first : BPawn - Coordinate{x=h, y=6}
+35012 <first : move h6g5
+35085 <first : BPawn 
+35085 <first : Coordinate{x=g, y=5}----BPawn 
+35085 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+35085 <first :  null  null  null  null  null  null  null  null 
+35085 <first :  null  null  null  null  null  null  null  null 
+35085 <first :  null  null BPawn  null  null  null BPawn  null 
+35085 <first :  null  null WPawn  null  null  null  null  null 
+35085 <first :  null  null  null WQueen  null  null  null  null 
+35085 <first : WPawn  null  null  null  null  null  null  null 
+35085 <first : WRook WKnight WBishop  null WKing WBishop WKnight  null 
+35085 <first : 
+36509 >first : time 29848
+36509 >first : otim 27632
+book hit = (NULL)
+36509 >first : g1h3
+36601 <first : Coordinate{x=h, y=3}----WKnight 
+36601 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+36601 <first :  null  null  null  null  null  null  null  null 
+36601 <first :  null  null  null  null  null  null  null  null 
+36601 <first :  null  null BPawn  null  null  null BPawn  null 
+36601 <first :  null  null WPawn  null  null  null  null  null 
+36601 <first :  null  null  null WQueen  null  null  null WKnight 
+36601 <first : WPawn  null  null  null  null  null  null  null 
+36601 <first : WRook WKnight WBishop  null WKing WBishop  null  null 
+36601 <first : 
+36601 <first : BPawn - Coordinate{x=c, y=5}
+36601 <first : BPawn - Coordinate{x=g, y=5}
+36601 <first : [Coordinate{x=g, y=4}] []
+36601 <first : BPawn - Coordinate{x=g, y=5}
+36601 <first : move g5g4
+36674 <first : BPawn 
+36674 <first : Coordinate{x=g, y=4}----BPawn 
+36674 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+36674 <first :  null  null  null  null  null  null  null  null 
+36674 <first :  null  null  null  null  null  null  null  null 
+36674 <first :  null  null BPawn  null  null  null  null  null 
+36674 <first :  null  null WPawn  null  null  null BPawn  null 
+36674 <first :  null  null  null WQueen  null  null  null WKnight 
+36674 <first : WPawn  null  null  null  null  null  null  null 
+36674 <first : WRook WKnight WBishop  null WKing WBishop  null  null 
+36674 <first : 
+39600 >first : time 29839
+39600 >first : otim 27332
+book hit = (NULL)
+39600 >first : h3g5
+39693 <first : Coordinate{x=g, y=5}----WKnight 
+39693 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+39693 <first :  null  null  null  null  null  null  null  null 
+39693 <first :  null  null  null  null  null  null  null  null 
+39693 <first :  null  null BPawn  null  null  null WKnight  null 
+39693 <first :  null  null WPawn  null  null  null BPawn  null 
+39693 <first :  null  null  null WQueen  null  null  null  null 
+39693 <first : WPawn  null  null  null  null  null  null  null 
+39693 <first : WRook WKnight WBishop  null WKing WBishop  null  null 
+39693 <first : 
+39693 <first : BPawn - Coordinate{x=c, y=5}
+39693 <first : BPawn - Coordinate{x=g, y=4}
+39693 <first : [Coordinate{x=g, y=3}] []
+39693 <first : BPawn - Coordinate{x=g, y=4}
+39693 <first : move g4g3
+39765 <first : BPawn 
+39765 <first : Coordinate{x=g, y=3}----BPawn 
+39765 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+39765 <first :  null  null  null  null  null  null  null  null 
+39765 <first :  null  null  null  null  null  null  null  null 
+39765 <first :  null  null BPawn  null  null  null WKnight  null 
+39765 <first :  null  null WPawn  null  null  null  null  null 
+39765 <first :  null  null  null WQueen  null  null BPawn  null 
+39765 <first : WPawn  null  null  null  null  null  null  null 
+39765 <first : WRook WKnight WBishop  null WKing WBishop  null  null 
+39765 <first : 
+40942 >first : time 29830
+40942 >first : otim 27207
+book hit = (NULL)
+40942 >first : f1g2
+41014 <first : Coordinate{x=g, y=2}----WBishop 
+41014 <first : BRook BKnight BBishop BQueen BKing BBishop BKnight BRook 
+41014 <first :  null  null  null  null  null  null  null  null 
+41014 <first :  null  null  null  null  null  null  null  null 
+41014 <first :  null  null BPawn  null  null  null WKnight  null 
+41014 <first :  null  null WPawn  null  null  null  null  null 
+41014 <first :  null  null  null WQueen  null  null BPawn  null 
+41014 <first : WPawn  null  null  null  null  null WBishop  null 
+41014 <first : WRook WKnight WBishop  null WKing  null  null  null 
+41014 <first : 
+41014 <first : BPawn - Coordinate{x=c, y=5}
+41014 <first : BPawn - Coordinate{x=g, y=3}
+41014 <first : BPawn - Coordinate{x=g, y=3}
+41014 <first : resign
+GameEnds(26, Black resigns, 1)
+41014 >first : result 1-0 {Black resigns}
+41014 >first : force
+GameEnds(26, Black resigns, 2)
+44553 >first : quit
